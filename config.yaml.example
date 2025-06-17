@@ -1,0 +1,24 @@
+# Oracle Cloud Infrastructure Configuration
+oci:
+  user: ocid1.user.oc1..aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  key_file: ~/.oci/oci_api_key.pem
+  fingerprint: aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99
+  tenancy: ocid1.tenancy.oc1..aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  region: us-ashburn-1
+
+# Object Storage Configuration
+storage:
+  namespace: your-namespace
+  # Default bucket can be overridden in method calls
+  default_bucket: your-default-bucket
+
+# Autonomous Data Warehouse Configuration
+adw:
+  # Connection string format: (description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.region.oraclecloud.com))(connect_data=(service_name=xxxxx_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+  connection_string: your-connection-string
+  username: your-username
+  password: your-password
+  # Optional: connection pool settings
+  pool_min: 1
+  pool_max: 5
+  pool_increment: 1
